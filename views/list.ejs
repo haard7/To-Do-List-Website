@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Haard To Do list</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div class="box" id="heading">
+        <h1> <%= KindofDay %> </h1>
+    </div>
+  <!-- <%  if(KindofDay === "Saturday" || KindofDay === "Sunday"){ %>
+      <h1 style="color: violet">Today is <%=KindofDay%></h1>
+    <% } else { %>
+      <h1 style="color: blue">Today is <%=KindofDay%></h1>
+    <% } %> -->
+   <div class="box">
+       <!-- <li> <%= newListItem  %> </li> -->
+       <% for (var i=0; i<newListItem.length; i++) { %>
+         <div class="item">
+           <input type="checkbox">
+             <p><%= newListItem[i] %></p>
+         </div>
+
+       <!-- </newListItem.length;> -->
+      <% } %>
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="button">+</button>
+      </form>
+   </div>
+
+
+
+
+  </body>
+</html>
